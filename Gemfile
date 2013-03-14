@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
+group :production do
+  gem 'pg', '0.14.0'
+end
+
 gem 'rails', '3.2.11'
-gem 'pg', '0.14.0'
 gem 'faker', '1.0.1'
 gem "state_machine", '1.1.2'
 gem "carrierwave"
