@@ -1,0 +1,372 @@
+$navbarHeight: 70px;
+$navbarBackgroundHighlight: #B0B8FF;
+$navbarBackground: #ffffff;
+$navbarLinkColor: #000068;
+$navbarLinkColorHover: lighten($navbarLinkColor, 50%);
+@import "bootstrap";
+
+
+/* ------------------- mixins, variables, etc. --------------------- */
+
+
+/* -------------------------- universal ---------------------------- */
+
+html {
+  overflow-y: scroll;
+}
+
+html, body {
+  height: 100%;
+}
+
+#body {
+  min-height: 100%;
+  position: relative;
+}
+
+#body-content {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+a {  
+  &:hover { 
+    text-decoration: none;
+  }
+}
+
+.center {
+  text-align: center;
+  h1 {
+  margin-bottom: 10px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.images {
+  border-radius: 10px;
+  border: 1px solid #A0A0A0;    
+  margin-bottom: 10px;
+}
+
+/* -------------------------- typography ------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin: 30px 0px 10px 0px;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+small, .small {
+  font-size: .8em;
+  line-height: 1em;
+  margin-top: 5px;
+}
+
+#logo {
+  float: left;
+  padding: 9px 0px 7px;
+}
+
+
+/* -------------------------- navbar / header -------------------- */
+
+.navbar {
+  .container {
+    width: 940px;  
+  }
+}
+
+.nav-link, .dropdown-toggle {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+
+/* ------------------------------ footer -------------------------- */
+
+footer {
+  position: absolute;
+  bottom: 0; 
+  padding-top: 5px;
+  color: #999;
+  hr {
+    margin-bottom: 6px;
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+     li {
+      float: left;
+      margin-left: 20px;
+    }
+  }
+}
+
+/* ------------------------ Sidebar ----------------------------------- */
+
+aside {
+  div {
+    padding-bottom: 10px;
+    width: 190px;
+  }
+  section {
+    background: #F8F8F8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+  } 
+  .badge { 
+    float: right;
+  }
+  .sidebar-label { 
+    float: left;
+  }  
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.icon-circle-arrow-right {
+  float: left;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.manuscript-sidebar { 
+  .title-field { 
+    width: 185px;
+  }
+}
+
+
+/* ----------------------- forms in general -------------------------- */
+
+
+input, textarea, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+select, .uneditable-input {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    margin: 0 0 18px 0;
+  }
+}
+
+.number-field {
+  width: 25px;
+}
+
+.title-field {     
+  width: 340px; 
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+ }
+
+optgroup {
+  font-style: normal;
+}
+
+.modal-body {
+  textarea {
+    width: 95%;
+    height: 50px;
+  }
+}
+
+/* ---------------------------- Agent pages --------------------- */
+
+/* INDEX page */
+
+#agent_listing {
+  h2 {
+    margin-top: 0px;
+  }
+  padding-top: 15px;
+  padding-bottom: 15px;
+  #agency_heading {
+    color: #C8C8C8;
+    font-size: 0.75em;
+  }
+}
+
+/* forms */
+#agent_name_prefix {
+  width: 50px;
+}
+
+#agency_id {
+  width: 250px;
+}
+
+/* SHOW pages */
+
+.logline {
+  color: $grayLight;
+  margin-top: 5px;
+}
+
+#query-list-link {
+  float: right;
+}
+
+.agent-links {
+  a {
+    margin-bottom: 10px;
+  }
+}
+
+#represented_submissions {
+  background-color: #fff0ff
+}
+
+
+/* ----------------------- Writer / Query Pages -------------------- */
+
+.tip {
+  color: #906040;
+  font-size: 1.2em;
+  background: #FFFFD0; 
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #FFC090;
+  border-radius: 10px;  
+}
+
+.mercury-tip {
+  display: none;
+}
+
+.nav-tabs {
+  li {
+    text-align: center;
+  }
+}
+
+/* HEADER */
+.materials-header {
+  margin-bottom: 130px;
+}
+
+.left-header {
+  float: left; 
+  margin-left: 20px; 
+}
+
+.right-header {
+  float: right; 
+}
+
+/* BODY */
+
+#synopsis_content, #overview_content, #marketing_analysis_content, #competitive_analysis_content, #bio_content, #outline_content, #attachment_content, .chapter_content { 
+  font-size: 1.1em;
+  line-height: 230%; 
+  margin-top: 4em;
+  p {  
+    line-height: 230%; 
+  } 
+  ul {   
+    list-style: disc outside none;
+  } 
+  li {
+    font-size: 1.1em;
+    line-height: 230%;
+  }
+}
+
+.query_content, .submission_content { 
+  margin-top: 1.4em;  
+  margin-bottom: 1.4em;
+  p {
+      margin-bottom: 1.4em;    
+  }
+}
+
+/* END BODY */
+
+
+/* -------------------------- Manuscript pages ------------------- */
+
+.manuscript-form {
+  select {
+    width: 150px;
+  }
+  textarea {
+    height: 100px;
+  }  
+}
+
+
+/* -------------------------- Chapter pages ----------------------- */
+
+#chapter-list {
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+/* --------------------- Synopsis / Biography pages --------------- */
+
+#synopsis_word_count {
+  width: 25px;
+}
+
+
+/* -------------------------- miscellaneous -------------------------- */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+}
+

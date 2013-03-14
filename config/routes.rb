@@ -1,7 +1,4 @@
 Waltz::Application.routes.draw do
 
-  get "static_pages/home"
-
-  root :to => 'static_pages#home'
-
+  match '/guess_my_job',    to: 'static_pages#home', :as => "home"
 end
