@@ -1,5 +1,6 @@
 Waltz::Application.routes.draw do
 
+  match "/" => redirect("/guess_my_job")
   match '/guess_my_job',    to: 'static_pages#home', :as => "home"
   post '/submit',    to: 'static_pages#submit', :as => "submit"
   match '/hint',    to: 'static_pages#hint', :as => "hint"
