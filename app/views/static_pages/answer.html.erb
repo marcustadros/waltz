@@ -1,0 +1,27 @@
+<div class="span8 center">
+  <%= image_tag "cover.jpg", size: "402x547", class: "images" %>
+</div>
+
+<div class="span4 center">
+  <% flash.each do |key, value| %>       
+    <%= content_tag :div, class: "alert alert-#{key}" do %>           
+      <%= value %>      
+    <% end %>        
+  <% end %>
+  <h1>I'm an award-winning novelist!</h1>
+
+  <h3>Thanks for playing. You're free gift is a partial of my new book, <i>My Waltzing Egypt.</i></h3>
+  <%= link_to "Download the book now", '#', class: "btn btn-signup btn-primary" %>
+  
+  
+  <h1>"Better than <i>The Kite Runner</i>"</h1> 
+  <h3>Jordan Rosendfeld</h3>
+  <h4>-Editor</h4>
+
+  </br>
+  </br>
+
+  <h1>"Masterpiece!"</h1> 
+  <h4>-ForeWord Reviews</h4>
+</div>
+  

@@ -1,2 +1,10 @@
-hello world
+<div class="span8 center">
+  <%= image_tag "headshot_1.jpg", size: "432x547", class: "images" %>
+</div>
 
+<div class="span4 center">
+  <h1>Guess my occupation and win a FREE gift!</h1>
+  <%= render 'form' %>
+  <%= link_to 'Need a hint?', hint_path, class: 'btn btn-large btn-warning' %>
+</div>
+  
