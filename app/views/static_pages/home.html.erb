@@ -1,12 +1,15 @@
-<div class="span8 center">
+<div class="span8">
   <%= image_tag "headshot_1.jpg", size: "432x547", class: "images" %>
+  <div>   
+    <%= render 'pinterest_button' %>
+    <%= render 'twitter_button' %>    
+    <%= render 'fb_button' %>  
+  </div>
 </div>
 
 <div class="span4 center">
   <h1>Guess my occupation and win a FREE gift!</h1>
   <%= render 'form' %>
   <%= link_to 'Need a hint?', hint_path, class: 'btn btn-large btn-warning' %>
-  <%= render 'fb_button' %>
-  <%= render 'twitter_button' %>
 </div>
   
