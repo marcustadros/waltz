@@ -3,11 +3,11 @@ class StaticPagesController < ApplicationController
   end
 
   def submit
-    if params[:guess] == 'Author'
+    if params[:guess].downcase == 'author'
       flash[:success] = "Correct! Claim your free gift below."  
       redirect_to answer_path 
     else
-      flash[:alert] = "You didn't get it, but we'll give you something anyway. See below."
+      flash[:error] = "You didn't get it, but we'll give you something anyway. See below."
       redirect_to answer_path 
     end
   end
